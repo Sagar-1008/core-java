@@ -8,10 +8,11 @@ class BookMyMovie{
 	 
 	 String snacks[];
 	 int noOfSnacks;
-	 int snacksPrice;
+	 int snacksPrice =50;
+	 int totalSnacksPrice;
 	 
 	
-	public BookMyMovie(String theaterName, int totalNoOfTickets, String movies[], int noOfSnacks, int snacksPrice,  String snacks[] )
+	public BookMyMovie(String theaterName, int totalNoOfTickets, String movies[], int noOfSnacks,  String snacks[] )
 	{
 		this.theaterName = theaterName;
 		this.totalNoOfTickets = totalNoOfTickets;
