@@ -1,4 +1,7 @@
-class Beer{
+//parent/super/base
+
+
+class Rum{
 
      double price;
 	 String alcoholicContent;
@@ -7,9 +10,9 @@ class Beer{
 	 String expiry;
 	 
 	 
-	 public void toGetweight(){
+	 public void toGetKick(){
 	 
-	    System.out.println("To get the weight ");
+	    System.out.println("To get the kick ");
 	 
 	 
 	 }

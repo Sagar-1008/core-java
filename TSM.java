@@ -1,5 +1,0 @@
-class TSM extends ManufactureCompany{
-
-
-
-}
