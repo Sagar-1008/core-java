@@ -1,0 +1,6 @@
+class Infosys extends SoftwareCompany{
+
+
+
+
+}
