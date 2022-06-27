@@ -1,7 +1,0 @@
-class OnePlus extends Mobile{
- 
-
-
-
-
-}
