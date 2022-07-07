@@ -1,4 +1,4 @@
-public class AirporDTOt{
+public class AirporDTO{
 
 	 private String id;
      private String name;

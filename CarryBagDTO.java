@@ -23,10 +23,10 @@ public class CarryBagDTO{
 		
 	}
 	
-	public void hold(){
+	/* public void hold(){
 	
 	   System.out.println("To hold the materials");
-	}
+	} */
 	
 	
 

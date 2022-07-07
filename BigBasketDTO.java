@@ -1,4 +1,4 @@
-public class BigBasket{
+public class BigBasketDTO{
 
 	 private String id;
      private String owner;
@@ -35,10 +35,10 @@ public class BigBasket{
 	   this.type = type;
 	 }
 	 
-	 public void useOfBigBasket(){
+	/* public void useOfBigBasket(){
 		 
 		 System.out.println("online supermarket for daily needs ");
-	 }
+	 }*/
 	 
 	 
 }
