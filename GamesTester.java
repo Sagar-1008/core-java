@@ -3,7 +3,7 @@ class GamesTester{
 
      public static void main(String a[]){
 		 
-		 Games game = new Games();
+		 GamesDTO game = new GamesDTO();
 		 game.setName("FootBall");
 		 game.setId("Fdr5489");
 		 game.setType("OutDoor");

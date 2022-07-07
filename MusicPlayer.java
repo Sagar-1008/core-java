@@ -1,4 +1,4 @@
-class MusicPlayer{
+public class MusicPlayerDTO{
 
 	 private String id;
      private String name;
@@ -35,11 +35,6 @@ class MusicPlayer{
 	 }
 	 
 	 
-	 public void useMusicPlayer(){
-		 
-		 System.out.println("To listen the songs");
-	 }
-	 
-	 
+	
 	 
 }

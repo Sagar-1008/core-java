@@ -3,7 +3,7 @@ class AirportTester{
 
      public static void main(String a[]){
 		 
-		 Airport airport = new Airport();
+		 AirportDTO airport = new AirportDTO();
 		 airport.setName("Kempegowda International airport");
 		 airport.setId("236jhu589");
 		 airport.setNoOfPassengers(15000);

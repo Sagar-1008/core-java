@@ -1,4 +1,4 @@
-class Ipl{
+public class IplDTO{
 
 	 private String teamName;
      private int totalNoTeams;
@@ -42,10 +42,6 @@ class Ipl{
 	   this.noOfseasons = noOfseasons;
 	 }
 	 
-	 public void aboutIpl(){
-		 
-		 System.out.println("The ipl is indian domicle cricket ");
-	 }
-	 
+	
 	 
 }

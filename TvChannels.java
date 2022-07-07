@@ -1,4 +1,4 @@
-class TvChannels{
+public class TvChannels{
 
 	 private int id;
      private String name;
@@ -33,10 +33,6 @@ class TvChannels{
 	   this.language = language;
 	 }
 	 
-	 public void infoTv(){
-		 
-		 System.out.println("From tv we can watch movies, series, live news and live sports ");
-	 }
-	 
+	
 	 
 }

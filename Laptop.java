@@ -1,4 +1,4 @@
-class Laptop{
+public class LaptopDTO{
 
      private String name;
 	 private double price;
@@ -44,10 +44,7 @@ class Laptop{
 	     this.operatingSystem = operatingSystem;
 	 }
 	 
-	 public void display(){
-	    System.out.println("The laptop is used to watch and play the games");
-	 }
-	   
+	
 
 
 

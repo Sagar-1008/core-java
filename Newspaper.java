@@ -1,4 +1,4 @@
-class Newspaper{
+public class NewspaperDTO{
 
 	 private String id;
      private String name;
@@ -41,11 +41,5 @@ class Newspaper{
 	 public void setLanguage(String language) {
 	   this.language = language;
 	 }
-	 
-	 public void infoNewspaper(){
-		 
-		 System.out.println("It gives daily information about politics, sports. ");
-	 }
-	 
-	 
+	
 }

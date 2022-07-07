@@ -1,4 +1,4 @@
-class Airport{
+public class AirporDTOt{
 
 	 private String id;
      private String name;

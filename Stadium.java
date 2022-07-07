@@ -1,4 +1,4 @@
-class Stadium{
+public class StadiumDTO{
 
      private String name;
 	 private String id;
@@ -39,13 +39,6 @@ class Stadium{
 	 }
 	 public void setType(String type) {
 	   this.type = type;
-	 }
-	 
-	 
-	 public void usesOfStadium(){
-		 
-		 
-		 System.out.println("The stadium is used to play the games");
 	 }
 	 
 

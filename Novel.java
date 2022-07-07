@@ -1,4 +1,4 @@
-class Novel{
+public class NovelDTO{
 
 	 private String id;
      private String name;
@@ -42,10 +42,6 @@ class Novel{
 	   this.publication = publication;
 	 }
 	 
-	 public void storyOfBook(){
-		 
-		 System.out.println("The common incident that occurs in farmers life  ");
-	 }
-	 
+
 	 
 }

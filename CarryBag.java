@@ -1,4 +1,4 @@
-public class CarryBag{
+public class CarryBagDTO{
 
    //to achieve the Encapsulation
     private String name;

@@ -2,7 +2,7 @@ class MusicPlayerTester{
 
      public static void main(String a[]){
 		 
-		 MusicPlayer music = new MusicPlayer();
+		 MusicPlayerDTO music = new MusicPlayerDTO();
 		 music.setName("Wynk Music");
 		 music.setId("124hj");
 		 music.setType("audio player");

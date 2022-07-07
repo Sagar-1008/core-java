@@ -3,7 +3,7 @@ class NovelTester{
 
      public static void main(String a[]){
 		 
-		 Novel novel = new Novel();
+		 NovelDTO novel = new NovelDTO();
 		 novel.setName("Jugari Cross");
 		 novel.setId("adcaf5865o");
 		 novel.setPrice(216.00);

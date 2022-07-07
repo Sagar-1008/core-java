@@ -3,7 +3,7 @@ class TvChannelsTester{
 
      public static void main(String a[]){
 		 
-		 TvChannels tv = new TvChannels();
+		 TvChannelsDTO tv = new TvChannelsDTO();
 		 tv.setName("Star Sports");
 		 tv.setId(589);
 		 tv.setType("Sports");

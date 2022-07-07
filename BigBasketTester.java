@@ -3,7 +3,7 @@ class BigBasketTester{
 
      public static void main(String a[]){
 		 
-		 BigBasket bb = new BigBasket();
+		 BigBasketDTO bb = new BigBasketDTO();
 		 bb.setId("854afg25");
 		 bb.setOwner("Tata");
 		 bb.setOriginPlace("India");

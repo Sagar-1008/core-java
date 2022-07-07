@@ -1,4 +1,4 @@
-class Oximeter{
+public class OximeterDTO{
 
 	 private String id;
      private String brandName;

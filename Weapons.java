@@ -1,4 +1,4 @@
-class Weapons{
+public class WeaponsDTO{
 
 	 private String id;
      private String name;
@@ -42,11 +42,6 @@ class Weapons{
 	 }
 	 
 	 
-	 public void useOfWeapon(){
-		 
-		 System.out.println("For Security purpose the weapons are used");
-	 }
-	 
-	 
+
 	 
 }

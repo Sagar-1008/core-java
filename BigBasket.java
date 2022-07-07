@@ -1,4 +1,4 @@
-class BigBasket{
+public class BigBasket{
 
 	 private String id;
      private String owner;
