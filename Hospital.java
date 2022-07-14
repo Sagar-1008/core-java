@@ -1,3 +1,4 @@
+import java.util.Arrays ;
 class Hospital{
      
 	 // Has many patients
@@ -40,6 +41,7 @@ class Hospital{
 		 
 		 System.out.println("Inside updatePatientAddressById ");
 		 boolean updateAddress = false;
+		 
 		 for(int i=0; i<dtos.length;i++){
 			 if(dtos[i].getId() == id ){
 				 dtos[i].setAddress(address);
@@ -71,27 +73,46 @@ class Hospital{
 		 return updateContactNo;
 	 }
 	 
-	 public void deletePatientDetails(int id){
-		 for(int i=0;i<dtos.length;i++){
-			 if(dtos[i].getId()==id){
-				 dtos[i]=null;
-				 System.out.println(dtos[i].getId()+"  "+dtos[i].getName()+"  "+dtos[i].getAddress()+"  "+dtos[i].getGender()+"  "+dtos[i].getContactNo());
+	 public boolean deletePatientDetailsByName(String name){
+		 boolean patientDeleted=false;
+		 System.out.println("enter deletePatientDetailsByName() ");
+		 int i,j; 
+		 for(i=0,j=0;j<dtos.length;j++){
+			 if(!dtos[j].getName().equals(name)){
+				 dtos[i++]=dtos[j];
+				 patientDeleted=true;
+			// System.out.println(dtos[i].getId()+"  "+dtos[i].getName()+"  "+dtos[i].getAddress()+"  "+dtos[i].getGender()+"  "+dtos[i].getContactNo());
 				 
-				System.out.println("the patient details is deleted");
+				//System.out.println("the patient details is deleted");
+				
 			 }
+			 
 			 else{
-				 //dtos[i]=dtos[i-1];
-				 
-				 System.out.println(dtos[i].getId()+"  "+dtos[i].getName()+"  "+dtos[i].getAddress()+"  "+dtos[i].getGender()+"  "+dtos[i].getContactNo());
+				
+				 System.out.println("the patient is not available");
+				// System.out.println(dtos[i].getId()+"  "+dtos[i].getName()+"  "+dtos[i].getAddress()+"  "+dtos[i].getGender()+"  "+dtos[i].getContactNo());
 			 }
 		 }
+		 dtos = Arrays.copyOf(dtos, i);
+		 return patientDeleted;
 	 }
 	 
-
-
-
-
-
+	 public boolean deletePatientByContactNo(long contactNo){
+		 System.out.println("inside deletePatientByContactNo()");
+		 boolean patientDeletedContatc=false;
+		 int i,j;
+		 for(i=0,j=0;j<dtos.length;j++){
+			 if(dtos[j].getContactNo()!=contactNo){
+				 dtos[i++]=dtos[j];
+				 patientDeletedContatc=true;
+			 }
+			 else{
+				 System.out.println("The patient not found");
+			 }
+		 }
+		 dtos = Arrays.copyOf(dtos, i);
+		 return patientDeletedContatc;
+	 }
 
 
 }

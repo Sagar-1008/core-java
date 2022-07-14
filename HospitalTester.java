@@ -68,7 +68,7 @@ class HospitalTester{
 		 hos.createPatient(dto2);
 		 hos.createPatient(dto3);
 		 hos.createPatient(dto4);*/
-		 hos.getPatientDetails();
+		/* hos.getPatientDetails();
 		 System.out.println("Enter the existing id to update the address");
 		 int existingId = sc.nextInt();
 		 System.out.println("Enter address to be update");
@@ -81,13 +81,19 @@ class HospitalTester{
 		 String existingName = sc.next();
 		 System.out.println("Enter contactNo to be update");
 		 long updateContactNo = sc.nextLong();
-		 hos.updatePatientContactNoByName(existingName, updateContactNo);
+		 hos.updatePatientContactNoByName(existingName, updateContactNo);*/
 		 
 		 
 		 hos.getPatientDetails();
-		 System.out.println("Enter the id to be deleted");
-		 int id1 = sc.nextInt();
-		 hos.deletePatientDetails(id1);
+		 System.out.println("Enter the name to be deleted");
+		 String name1 = sc.next();
+		 hos.deletePatientDetailsByName(name1);
+		 hos.getPatientDetails();
+		 System.out.println("enter the contact no to be deleted");
+		 long contactNo1 = sc.nextLong();
+		 hos.deletePatientByContactNo(contactNo1);
+		 hos.getPatientDetails();
+		 
 	 
 	 
 	 }
