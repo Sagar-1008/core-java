@@ -1,11 +1,12 @@
 class Hospital{
      
 	 // Has many patients
-     PatientDTO dtos[] = new PatientDTO[5];
+     PatientDTO dtos[] ;
 	 
 	 int index;
 	 
-	 public Hospital(){
+	 public Hospital(int size){
+		 dtos = new PatientDTO[size];
 	    System.out.println("The Hospital object is created");
 	 }
 	 
@@ -32,6 +33,57 @@ class Hospital{
 		 for(int i=0; i<dtos.length; i++){
 			 
 			System.out.println(dtos[i].getId()+"  "+dtos[i].getName()+"  "+dtos[i].getAddress()+"  "+dtos[i].getGender()+"  "+dtos[i].getContactNo());
+		 }
+	 }
+	 
+	 public boolean updatePatientAddressById(int id, String address){
+		 
+		 System.out.println("Inside updatePatientAddressById ");
+		 boolean updateAddress = false;
+		 for(int i=0; i<dtos.length;i++){
+			 if(dtos[i].getId() == id ){
+				 dtos[i].setAddress(address);
+				 updateAddress = true;
+				 
+			 }
+			 else{
+				 System.out.println("The patient id is not found");
+			 }
+		 }
+		 return updateAddress;
+	 }
+	 
+	 
+	 public boolean updatePatientContactNoByName(String name, long contactNo){
+		 
+		 System.out.println("Inside updatePatientContactNoByName ");
+		 boolean updateContactNo = false;
+		 for(int i=0; i<dtos.length;i++){
+			 if(dtos[i].getName().equals(name)){
+				 dtos[i].setContactNo(contactNo);
+				 updateContactNo = true;
+				 
+			 }
+			 else{
+				 System.out.println("The patient name is not found");
+			 }
+		 }
+		 return updateContactNo;
+	 }
+	 
+	 public void deletePatientDetails(int id){
+		 for(int i=0;i<dtos.length;i++){
+			 if(dtos[i].getId()==id){
+				 dtos[i]=null;
+				 System.out.println(dtos[i].getId()+"  "+dtos[i].getName()+"  "+dtos[i].getAddress()+"  "+dtos[i].getGender()+"  "+dtos[i].getContactNo());
+				 
+				System.out.println("the patient details is deleted");
+			 }
+			 else{
+				 //dtos[i]=dtos[i-1];
+				 
+				 System.out.println(dtos[i].getId()+"  "+dtos[i].getName()+"  "+dtos[i].getAddress()+"  "+dtos[i].getGender()+"  "+dtos[i].getContactNo());
+			 }
 		 }
 	 }
 	 
