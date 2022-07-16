@@ -34,7 +34,7 @@ class Airport{
 	     
 		 for(int i=0; i<terminals.length; i++){
 		    
-			  System.out.println(terminals[i].getId()+"  "+terminals[i].getName()+"  "+terminals[i].getNoOfLoadingBridges()+"  "+terminals[i].getNoOfDepartureGates()+"  "+terminals[i].getNoOfCheckinCounters());
+			  System.out.println(terminals[i]);
 		 
 		 }
 	     
@@ -107,6 +107,37 @@ class Airport{
 		 }
 		 terminals = Arrays.copyOf(terminals, i);
 		 return terminalDeleted;
+	 }
+	 
+	 public String[] getAllTerminalName(){
+		 System.out.println("Inside getAllTerminalName()");
+		 int i,j;
+		 for( j=0,i=0;i<terminals.length;i++){ 
+		     System.out.println(terminals[i].getName());
+			  j++;
+		 }
+		    
+		    String[] allTerminalNames = new String[j];
+		  for(int k=0,m=0;k<terminals.length;k++){
+			 allTerminalNames[m++] = terminals[k].getName(); 
+		  }
+
+		 return allTerminalNames;
+	 }
+	 
+	 public String getTerminalNameById(int id){
+		 System.out.println("Inside getTerminalNameById()");
+		 String terminalName = null;
+		 for(int i=0; i<terminals.length;i++){
+			 if(terminals[i].getId()==id){
+				 terminalName = terminals[i].getName();
+			 }
+			 else{
+				 System.out.println("The Terminal id not matched");
+			 }
+			 
+		 }
+		 return terminalName;
 	 }
 	 
 

@@ -33,24 +33,56 @@ class BooksTester{
 
 		  }
 		  
-		  lib.getBookDetails();
-	     
-		/* System.out.println("Enter the existing Name to update the publication");
-		 String existingName = sc.next();
-		 System.out.println("Enter publication to be update");
-		 String updatePublication = sc.next();
-		 lib.updatePublicationByName(existingName, updatePublication);
-		 
-		  lib.getBookDetails();*/
+		  String option = null;
+		 do{
+			   System.out.println("Enter 1 for all Books details");
+			   System.out.println("Enter 2 for update publication by name");
+			   System.out.println("Enter 3 for delete books by name");
+			   System.out.println("Enter 4 for delete books by author");
+			   System.out.println("Enter 5 for get book name by id");
+			   System.out.println("Enter 6 for get all books name");
+			   
+			   System.out.println("Enter choice");
+			   int choice = sc.nextInt();
+			   
+			   switch(choice){
+				   case 1 : lib.getBookDetails();
+				             break;
+							 
+				   case 2 :  System.out.println("Enter the existing Name to update the publication");
+		                     String existingName = sc.next();
+		                     System.out.println("Enter publication to update");
+		                     String updatePublication = sc.next();
+		                     lib.updatePublicationByName(existingName, updatePublication);
+				             break ;
+							 
+				   case 3 :  System.out.println("Enter the name to be deleted");
+		                     String name1 = sc.next();
+		                     lib.deleteByName(name1);
+				             break ;
+							 
+				   case 4 :  System.out.println("enter the author to be deleted");
+		                     String author1 = sc.next();
+		                     lib.deleteByAuthor(author1);
+				             break ;
+							 
+				   case 5 :  System.out.println("Enter the id to get the name");
+				             int id1 = sc.nextInt();
+				             System.out.println(lib.getBookNameById(id1));
+				             break ;
+							 
+					case 6 : lib.getAllBooksName();
+					          break ;
+				   default :  System.out.println("Enter valid choice");
+				             break ;
+			   } 
+			   
+			   System.out.println("Do you want to continue Y/N");
+			   option = sc.next();
+			 
+		 }while(option.equalsIgnoreCase("Y"));
 		  
-		 System.out.println("Enter the name to be deleted");
-		 String name1 = sc.next();
-		 lib.deleteByName(name1);
-		 lib.getBookDetails();
-		 System.out.println("enter the author to be deleted");
-		 String author1 = sc.next();
-		 lib.deleteByAuthor(author1);
-		lib.getBookDetails();
+		  
 	  
 	  }
 

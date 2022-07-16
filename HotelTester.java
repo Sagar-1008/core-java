@@ -33,25 +33,48 @@ class HotelTester{
 		 
 		 }
 		 
-		 hotel.getFoodItemDetails();
+		 String option = null;
+		 do{
+			   System.out.println("Enter 1 for all food details");
+			   System.out.println("Enter 2 for update price by name");
+			   System.out.println("Enter 3 for delete food by name");
+			   System.out.println("Enter 4 for delete food by type");
+			   System.out.println("Enter 5 for all fooditem name");
+			   
+			   System.out.println("Enter choice");
+			   int choice = sc.nextInt();
+			   
+			   switch(choice){
+				   case 1 : hotel.getFoodItemDetails();
+				             break;
+				   case 2 : System.out.println("Enter the existing Name to update the price");
+		                    String existingName = sc.next();
+		                    System.out.println("Enter price to be update");
+		                    int updatePrice = sc.nextInt();
+		                    hotel.updatePriceByName(existingName, updatePrice);
+				             break ;
+				   case 3 :  System.out.println("Enter the name to be deleted");
+		                     String name1 = sc.next();
+		                     hotel.deleteByName(name1);
+				             break ;
+				   case 4 :  System.out.println("enter the type to  delete");
+		                     String type1 = sc.next();
+		                     hotel.deleteByType(type1);
+				             break ;
+				   case 5 :  hotel.getAllFoodItemName();
+				             break ;
+				   default :  System.out.println("Enter valid choice");
+				             break ;
+			   } 
+			   
+			   System.out.println("Do you want to continue Y/N");
+			   option = sc.next();
+			 
+		 }while(option.equalsIgnoreCase("Y"));
+		 
+		 
 	     
-		 /*System.out.println("Enter the existing Name to update the price");
-		 String existingName = sc.next();
-		 System.out.println("Enter price to be update");
-		 int updatePrice = sc.nextInt();
-		 hotel.updatePriceByName(existingName, updatePrice);
-		 
-		 hotel.getFoodItemDetails();*/
-		 
-		 
-		 System.out.println("Enter the name to be deleted");
-		 String name1 = sc.next();
-		 hotel.deleteByName(name1);
-		 hotel.getFoodItemDetails();
-		 System.out.println("enter the id to be deleted");
-		 int id1 = sc.nextInt();
-		 hotel.deleteById(id1);
-		 hotel.getFoodItemDetails();
+		
 	  }
 
 

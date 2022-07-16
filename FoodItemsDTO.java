@@ -34,6 +34,11 @@ public class FoodItemsDTO {
 	 public void setType(String type){
 	    this.type = type;
 	 }
+	 
+	 @Override
+	 public String toString(){
+		 return "[OrderDTO : Id = "+this.getId()+", Name = "+this.getName()+", Price = "+this.getPrice()+", Type="+this.getType()+"]";
+	 }
 	
 
 

@@ -34,44 +34,44 @@ class Customer{
 	     
 		 for(int i=0; i<orders.length; i++){
 		    
-			  System.out.println(orders[i].getId()+"  "+orders[i].getName()+"  "+orders[i].getPrice()+"  "+orders[i].getType());
+			  System.out.println(orders[i]);
 		 
 		 }
 	     
 	}
 	
-	/*public boolean updateTypeById(int id, String type){
+	 public boolean updateNameById(int id, String name){
 		 
 		 System.out.println("Inside updateTypeById ");
-		 boolean updateType = false;
+		 boolean updateName = false;
 		 for(int i=0; i<orders.length;i++){
 			 if(orders[i].getId() == id ){
-				 orders[i].setType(type);
-				 updateType = true;
+				 orders[i].setName(name);
+				 updateName = true;
 				 
 			 }
 			 else{
 				 System.out.println("The order id is not found");
 			 }
 		 }
-		 return updateType;
-	 }*/
+		 return updateName;
+	 }
 	 
-	 public boolean updatePriceByName(String name, int price){
+	 public boolean updatequantityByName(String name, int quantity){
 		 
-		 System.out.println("Inside updatePriceByName ");
-		 boolean updatePrice = false;
+		 System.out.println("Inside updatequantityByName ");
+		 boolean updatequantity = false;
 		 for(int i=0; i<orders.length;i++){
 			 if(orders[i].getName().equals(name)){
-				 orders[i].setPrice(price);
-				 updatePrice = true;
+				 orders[i].setQuantity(quantity);
+				 updatequantity = true;
 				 
 			 }
 			 else{
 				 System.out.println("The order name is not found");
 			 }
 		 }
-		 return updatePrice;
+		 return updatequantity;
 	 }
 	 
 	 public boolean deleteByName(String name){
@@ -107,7 +107,69 @@ class Customer{
 		 return deleteOrder;
 	 }
 	 
+	 
+	 public String getOrderTypeByName(String name){
+		 System.out.println("inside getOrderTypeByName()");
+		 String orderType = null;
+		 for(int i=0;i<orders.length;i++){
+			 if(orders[i].getName().equals(name)){
+				 orderType = orders[i].getType();
+			 }
+			 else{
+				 System.out.println("The customer name not matched");
+			 }
+		 }
+		 return orderType;
+	 } 
+	 
+	 public String getOrderNameById(int id){
+		 String orderName = null;
+		 for(int i=0; i<orders.length;i++){
+			 if(orders[i].getId()==id){
+				 orderName = orders[i].getName();
+			 }
+			 else{
+				 System.out.println("The customer id not matched");
+			 }
+			 
+		 }
+		 return orderName;
+	 }
+	 
+	 
+	 public int[] getAllQuantities(){
 
+		 int i,j;
+		 for( j=0,i=0;i<orders.length;i++){
+              System.out.println(orders[i].getQuantity());			 
+			  j++;
+		 }
+		   
+		    int[] allQuantities = new int[j];
+		  for(int k=0,m=0;k<orders.length;k++){
+			 allQuantities[m++] = orders[k].getQuantity(); 
+		  }
+
+		 return allQuantities;
+	 }
+	 
+	 public String[] getAllOrderName(){
+		 
+		 int i,j;
+		 for( j=0,i=0;i<orders.length;i++){ 
+		     System.out.println(orders[i].getName());
+			  j++;
+		 }
+		    
+		    String[] allOrderName = new String[j];
+		  for(int k=0,m=0;k<orders.length;k++){
+			 allOrderName[m++] = orders[k].getName(); 
+		  }
+
+		 return allOrderName;
+	 }
+	 
+	 
 
 
 

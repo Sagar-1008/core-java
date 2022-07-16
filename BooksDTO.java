@@ -43,6 +43,11 @@ class BooksDTO{
 	 public void setType(String type){
 	    this.type = type;
 	 }
+	 
+	 @Override
+	 public String toString(){
+		 return "[BooksDTO = Id = "+ this.getId()+", Name= "+this.getName()+", Author = "+this.getAuthor()+", Publication= "+this.getPublication()+", Type= "+this.getType()+"]";
+	 }
 
 
 

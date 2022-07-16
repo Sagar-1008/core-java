@@ -42,6 +42,13 @@ public class TerminalDTO {
 	 public void setNoOfCheckinCounters(int noOfCheckIncounters){
 	    this.noOfCheckIncounters = noOfCheckIncounters;
 	 }
+	 
+	 @Override
+	 public String toString(){
+		 return "[TerminalDTO : Id="+this.getId()+", Name="+this.getName()+", NoOfLoadingbridges= "+this.getNoOfLoadingBridges()+", NoOfDeparturegates= "+this.getNoOfDepartureGates()+", NoOfCheckinCounters="+this.getNoOfCheckinCounters()+"]";
+	 }
+	 
+	 
 	
 
 

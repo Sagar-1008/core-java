@@ -34,7 +34,7 @@ class Hotel{
 	     
 		 for(int i=0; i<foodItems.length; i++){
 		    
-			  System.out.println(foodItems[i].getId()+"  "+foodItems[i].getName()+"  "+foodItems[i].getPrice()+"  "+foodItems[i].getType());
+			  System.out.println(foodItems[i]);
 		 
 		 }
 	     
@@ -58,6 +58,7 @@ class Hotel{
 	 }
 	 
 	 
+	 
 	  public boolean deleteByName(String name){
 		 System.out.println("inside deleteByName");
 		 boolean deleteFoodItem=false;
@@ -75,12 +76,12 @@ class Hotel{
 	 }
 	 
 	 
-	  public boolean deleteById(int id){
-		 System.out.println("inside deleteById");
+	  public boolean deleteByType(String type){
+		 System.out.println("inside deleteByType");
 		 boolean deleteFoodItem=false;
 		 int i,j;
 		 for(i=0,j=0;j<foodItems.length;j++){
-			 if(foodItems[j].getId()!=id){
+			 if(foodItems[j].getType()!=type){
 				 foodItems[i++]=foodItems[j];
 				 deleteFoodItem = true;
 			 } else {
@@ -88,9 +89,25 @@ class Hotel{
 			 }
 		 }
 		 foodItems = Arrays.copyOf(foodItems, i);
+		 System.out.println("end deleteByType ");
 		 return deleteFoodItem;
 	 }
-
-
+	 
+	 public String[] getAllFoodItemName(){
+		 System.out.println("Inside getAllFoodItemName ");
+		 int i,j;
+		 for( j=0,i=0;i<foodItems.length;i++){ 
+			  System.out.println(foodItems[i].getName());
+			  j++;
+		 }
+		    
+		  String[] allFoodName = new String[j];
+		   for(int k=0,m=0;k<foodItems.length;k++){
+			 allFoodName[m++] = foodItems[k].getName(); 
+		  }
+           System.out.println("End getAllFoodItemName ");
+		 return allFoodName;
+	 }
+	 
 
 }
