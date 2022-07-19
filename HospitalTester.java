@@ -7,7 +7,7 @@ class HospitalTester{
 		    System.out.println("The number of patient");
 			int size = sc.nextInt();
 	   
-		 Hospital hos = new Hospital(size);
+		 Hospital hos = new HospitalImpl(size);
 		 
 		 for(int i=0; i<size;i++) {
 		 PatientDTO dto = new PatientDTO();

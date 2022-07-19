@@ -8,7 +8,7 @@ class BooksTester{
 		  System.out.println("The Number of Books");
 		  int size = sc.nextInt();
 		  
-		  Library lib = new Library(size);
+		  Library lib = new LibraryImpl(size);
 		  for(int i=0; i<size;i++){
 		   
 		   BooksDTO book = new BooksDTO();

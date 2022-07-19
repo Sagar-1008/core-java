@@ -8,7 +8,7 @@ class AirportTester{
 		 System.out.println("Enter the Number of terminals");
 		 int size = sc.nextInt();
 		 
-		 Airport airport = new Airport(size);
+		 Airport airport = new AirportImpl(size);
 		 
 		for(int i=0; i<size;i++) {
 			

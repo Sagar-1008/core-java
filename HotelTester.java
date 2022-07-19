@@ -8,7 +8,7 @@ class HotelTester{
 		 System.out.println("Enter the Number of food items");
 		 int size = sc.nextInt();
 		 
-		 Hotel hotel = new Hotel(size);
+		 Hotel hotel = new HotelImpl(size);
 		 
 		for(int i=0; i<size;i++) {
 			

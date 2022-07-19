@@ -8,7 +8,7 @@ class CustomerTester{
 		 System.out.println("Enter the Number of orders");
 		 int size = sc.nextInt();
 		 
-		 Customer cus = new Customer(size);
+		 Customer cus = new CustomerImpl(size);
 		 
 		for(int i=0; i<size;i++) {
 			
