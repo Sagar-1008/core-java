@@ -34,8 +34,7 @@ public class FloorArrayNumber {
 		while (start <= end) {
 			int mid = (start + end) / 2;
 			if (target <= arr[mid]) {
-				number = arr[mid];
-				end = mid - 1;
+				number = arr[mid];		end = mid - 1;
 			}
 			else if (target == arr[mid]) {
 				return arr[mid];
@@ -50,4 +49,5 @@ public class FloorArrayNumber {
 		return number;
 	}
 
+    
 }

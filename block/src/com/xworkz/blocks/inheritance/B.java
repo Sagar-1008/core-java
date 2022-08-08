@@ -5,7 +5,7 @@ public class B extends A{
        Integer display() {
     	   String name = "S";
     	   System.out.println("Inside child display method");
-    	   return  Integer(25);
+    	   return 25;
        }
 
 }

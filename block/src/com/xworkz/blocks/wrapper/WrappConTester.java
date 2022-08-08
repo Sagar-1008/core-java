@@ -2,7 +2,8 @@ package com.xworkz.blocks.wrapper;
 
 public class WrappConTester {
        public static void main(String[] args) {
-		
+		 
+    	   
     	   Integer id = 89;
     	   int id1 = id.intValue();
     	   byte id2 = id.byteValue();
@@ -63,11 +64,12 @@ public class WrappConTester {
   
     	   System.out.println(idD1+"  "+idD2+"  "+idD3+"  "+idD4+"  "+idD5+"  "+idD6);
     	   
-    	   Character ch = 'A';
+    	   Character ch = 'a';
     	   int ch1 = ch.charValue();
     	   long ch2 = ch.charValue();
     	   float ch3 = ch.charValue();
     	   double ch4 = ch.charValue();
+    	  
     	   
     	   System.out.println(ch1+" "+ch2+" "+ch3+" "+ch4);
     	   
